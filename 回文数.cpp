@@ -1,24 +1,24 @@
-//#include<stdio.h>
-//int main()
-//{
-//	int a;
-//	printf("ÇëÊäÈëÒ»¸öÕûÊıÀ´ÅĞ¶ÎÊÇ·ñÎª»ØÎÄÊı");
-//	scanf_s("%d", &a);
-//	int A = a;//±£ÁôÔ­Ê¼Öµ
-//	int c = 0;
-//	while(a!=0)//ÕâÒ»¶ÎÑ­»·ÊÇÖØµã£¡£¡£¡£¡£¡£¡
-//	{
-//		int b = a % 10;
-//		c = c * 10 + b;
-//		a = a / 10;
-//	}
-//	if(c==A)
-//	{
-//		printf("YES");
-//	}
-//	else if(c!=A)
-//	{
-//		printf("NO");
-//	}
-//	return 0;
-//}
+#include<stdio.h>
+int main()
+{
+	int a;
+	printf("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°æ¥åˆ¤æ®µæ˜¯å¦ä¸ºå›æ–‡æ•°");
+	scanf_s("%d", &a);
+	int A = a;//ä¿ç•™åŸå§‹å€¼
+	int c = 0;
+	while(a!=0)//è¿™ä¸€æ®µå¾ªç¯æ˜¯é‡ç‚¹ï¼ï¼ï¼ï¼ï¼ï¼
+	{
+		int b = a % 10;
+		c = c * 10 + b;
+		a = a / 10;
+	}
+	if(c==A)
+	{
+		printf("YES");
+	}
+	else if(c!=A)
+	{
+		printf("NO");
+	}
+	return 0;
+}
