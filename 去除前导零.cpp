@@ -1,49 +1,50 @@
-//#include <iostream>
-//using namespace std;
-//#pragma warning(disable:4996)
-//int main()
-//{
-//	int a;//ÅĞ¶ÏÔËĞĞÊıÁ¿
-//	scanf("%d", &a);
-//	for (int i = 0; i < a; i++)
-//	{
-//		char goal[1000];//ÓÃÓÚÊäÈëµÄ×Ö·û´®
-//		scanf("%s", goal);
-//		char d[1000];//ÓÃÓÚÌæ»»ĞÂµÄ×Ö·û´®
-//		int num = 0;//ĞÂ×Ö·û´®µÄË÷Òı
-//		int tool = 0;
-//		
-//		
-//		
-//			for (int b = 0; b < 5; b++)
-//			{
-//				if (goal[4] == '0')
-//				{
-//					printf("0");
-//					
-//					break;
-//				}
-//
-//
-//				else if (goal[b] != '0')
-//				{
-//					d[num] = goal[b];
-//					num++;
-//
-//
-//				}
-//
-//
-//
-//			}
-//			d[num] = '\0';//ÕâÒ»²½ºÜÖØÒª£¬½«numÓëË÷ÒıÇÉÃî½áºÏÆğÀ´
-//			printf("%s\n", d);
-//		
-//		
-//	}
-//
-//	return 0;
-//
-//}
-//
+#include <iostream>
+using namespace std;
+#pragma warning(disable:4996)
+int main()
+{
+	int a;//åˆ¤æ–­è¿è¡Œæ•°é‡
+	scanf("%d", &a);
+	for (int i = 0; i < a; i++)
+	{
+		char goal[1000];//ç”¨äºè¾“å…¥çš„å­—ç¬¦ä¸²
+		scanf("%s", goal);
+		char d[1000];//ç”¨äºæ›¿æ¢æ–°çš„å­—ç¬¦ä¸²
+		int num = 0;//æ–°å­—ç¬¦ä¸²çš„ç´¢å¼•
+		int tool = 0;
+		
+		
+		
+			for (int b = 0; b < 5; b++)
+			{
+				if (goal[4] == '0')
+				{
+					printf("0");
+					
+					break;
+				}
+
+
+				else if (goal[b] != '0')
+				{
+					d[num] = goal[b];
+					num++;
+
+
+				}
+
+
+
+			}
+			d[num] = '\0';//è¿™ä¸€æ­¥å¾ˆé‡è¦ï¼Œå°†numä¸ç´¢å¼•å·§å¦™ç»“åˆèµ·æ¥
+			printf("%s\n", d);
+		
+		
+	}
+
+	return 0;
+
+}
+
+
 
