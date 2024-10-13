@@ -1,0 +1,74 @@
+/:小蓝是个热衷于存钱的小伙。他有一个存钱罐，里面存有 N 枚硬币，硬币的面值分别a1 a1 a3...这天，小蓝决定带着这 
+N 枚硬币去往他最喜爱的玩具店进行消费。只不过，妈妈规定，小蓝最多只能使用这 
+N 枚硬币中的其中 
+3 枚。
+对此，请你帮小蓝算算，在使用不超过 
+3 枚硬币的情况下，小蓝能够支付多少种不同的金额呢？:/
+
+#include <iostream>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int* arr = (int *)calloc(n, sizeof(int));
+    for (int i=0;i < n; i++)
+    {
+        int num;
+        cin >> num;
+        arr[i] = num;
+    }
+    int * money = (int *)calloc(10000, sizeof(int));
+    int index = 0;
+
+    for (int a = 0; a < n - 2; a++)
+    {
+        for (int b = a + 1; b < n - 1; b++)
+        {
+            for (int c = b + 1; c < n; c++)
+            {
+                money[index] = arr[a] + arr[b] + arr[c];
+                index++;
+            }
+        }
+    }
+    for (int a = 0; a < n -1; a++)
+    {
+        for (int b = a + 1; b < n ; b++)
+        {
+           
+            
+                money[index] = arr[a] + arr[b];
+                index++;
+            
+        }
+    }
+    
+    
+        for (int b = 0; b < n ; b++)
+        {
+           
+            
+                money[index] = arr[b];
+                index++;
+            
+        }
+    
+    
+    int goal = 0;
+    sort(money, money + 10000);
+    for (int i = 0; i < 10000; i++)
+    {
+        if (money[i + 1] - money[i] != 0)
+        {
+            goal++;
+        }
+    }
+
+    cout << goal;
+
+
+    return 0;
+}
